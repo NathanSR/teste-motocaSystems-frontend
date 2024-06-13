@@ -1,0 +1,22 @@
+.Button {
+    height: 3rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: .5rem;
+    gap: .3rem;
+    cursor: pointer;
+}
+
+.default {
+    background-color: #3badfb;
+    color: white;
+}
+
+.transparent{
+    background-color: transparent;
+    border: transparent;
+    color: inherit;
+}

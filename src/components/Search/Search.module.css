@@ -1,0 +1,25 @@
+.Search{
+    height: 3rem;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	border: 1px solid #CAC9CD;
+	border-radius: .5rem;
+	padding: .5rem 1rem;
+	max-width: 30rem;
+	width: 100%;
+	flex: 1;
+}
+
+input{
+	outline: none;
+	border: none;
+	background: transparent;
+	color: inherit;
+	width: 100%;
+}
+
+::placeholder {
+    color: inherit;
+    opacity: 1;
+}
