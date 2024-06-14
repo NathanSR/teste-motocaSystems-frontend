@@ -1,5 +1,5 @@
 export interface Motorcycle {
-    code: string;
+    id: string;
     model: string;
     color: string;
     value: number;

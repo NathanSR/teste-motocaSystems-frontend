@@ -30,7 +30,7 @@ function App() {
 					<Button icon={<PlusIcon />} children="NOVO REGISTRO" />
 				</div>
 			</header>
-			<ListMotorcycles array={motorcyles} />
+			<ListMotorcycles state={[motorcyles, setMotorcycles]} />
 		</div>
 	);
 }

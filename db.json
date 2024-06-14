@@ -1,74 +1,53 @@
 {
-    "motorcycles": [
-        {
-            "code": "#001",
-            "model": "Honda CB500F",
-            "color": "Vermelho",
-            "value": 30000,
-            "status": "Em estoque"
-        },
-        {
-            "code": "#002",
-            "model": "Honda CBR650R",
-            "color": "Azul",
-            "value": 32000,
-            "status": "Sem estoque"
-        },
-        {
-            "code": "#003",
-            "model": "Honda CBR500R",
-            "color": "Verde",
-            "value": 35000,
-            "status": "Em trânsito"
-        },
-        {
-            "code": "#004",
-            "model": "Honda CRF250L",
-            "color": "Preto",
-            "value": 40000,
-            "status": "Em estoque"
-        },
-        {
-            "code": "#005",
-            "model": "Honda XR150L",
-            "color": "Branco",
-            "value": 29000,
-            "status": "Em estoque"
-        },
-        {
-            "code": "#006",
-            "model": "Honda CB650R",
-            "color": "Vermelho",
-            "value": 42000,
-            "status": "Sem estoque"
-        },
-        {
-            "code": "#007",
-            "model": "Honda CBR1000RR",
-            "color": "Cinza",
-            "value": 37000,
-            "status": "Em trânsito"
-        },
-        {
-            "code": "#008",
-            "model": "Honda CRF1100L Africa Twin",
-            "color": "Preto",
-            "value": 45000,
-            "status": "Em estoque"
-        },
-        {
-            "code": "#009",
-            "model": "Honda CB300R",
-            "color": "Laranja",
-            "value": 33000,
-            "status": "Sem estoque"
-        },
-        {
-            "code": "#010",
-            "model": "Honda NC750X",
-            "color": "Prata",
-            "value": 31000,
-            "status": "Em trânsito"
-        }
-    ]
+  "motorcycles": [
+    {
+      "id": "1",
+      "model": "Honda CB500F",
+      "color": "Vermelho",
+      "value": 30000,
+      "status": "Em estoque"
+    },
+    {
+      "id": "3",
+      "model": "Honda CBR500R",
+      "color": "Verde",
+      "value": 35000,
+      "status": "Em trânsito"
+    },
+    {
+      "id": "4",
+      "model": "Honda CRF250L",
+      "color": "Preto",
+      "value": 40000,
+      "status": "Em estoque"
+    },
+    {
+      "id": "6",
+      "model": "Honda CB650R",
+      "color": "Vermelho",
+      "value": 42000,
+      "status": "Sem estoque"
+    },
+    {
+      "id": "8",
+      "model": "Honda CRF1100L Africa Twin",
+      "color": "Preto",
+      "value": 45000,
+      "status": "Em estoque"
+    },
+    {
+      "id": "9",
+      "model": "Honda CB300R",
+      "color": "Laranja",
+      "value": 33000,
+      "status": "Sem estoque"
+    },
+    {
+      "id": "10",
+      "model": "Honda NC750X",
+      "color": "Prata",
+      "value": 31000,
+      "status": "Em trânsito"
+    }
+  ]
 }
