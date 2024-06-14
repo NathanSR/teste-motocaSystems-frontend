@@ -4,7 +4,7 @@
       "id": "1",
       "model": "Honda CB500F",
       "color": "Vermelho",
-      "value": 30000,
+      "value": 30000.5,
       "status": "Em estoque"
     },
     {
@@ -19,7 +19,7 @@
       "model": "Honda CRF250L",
       "color": "Preto",
       "value": 40000,
-      "status": "Em estoque"
+      "status": "Sem estoque"
     },
     {
       "id": "5",
@@ -61,7 +61,14 @@
       "model": "Honda CBR650RET",
       "color": "Azul",
       "value": 32000,
-      "status": "Em estoque"
+      "status": "Em trânsito"
+    },
+    {
+      "id": "234",
+      "color": "234",
+      "model": "234",
+      "status": "Em estoque",
+      "value": 234
     }
   ]
 }
