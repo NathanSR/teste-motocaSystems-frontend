@@ -1,0 +1,79 @@
+.ListMotorcycles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-inline: 1rem;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Estilizando cartão de dados da moto */
+.CardMotorcycle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem -.6rem black;
+}
+
+.CardMotorcycle:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Estilizar codigo da moto */
+.moto_code {
+    color: #8C57FF;
+    font-weight: bold;
+    width: 8rem;
+    text-align: center;
+}
+
+/* Estilizar modelo da moto */
+.moto_model {
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+
+/* Estilizar status da moto */
+.moto_status_Em_estoque{
+    background-color: #354546;
+    color: #56CA00;
+    text-transform: capitalize;
+    padding: .3rem .8rem;
+    border-radius: 1rem;
+}
+.moto_status_Sem_estoque{
+    background-color: #55304C;
+    color: #FF4C51;
+    text-transform: capitalize;
+    padding: .3rem .8rem;
+    border-radius: 1rem;
+}
+.moto_status_Em_trânsito{
+    background-color: #544146;
+    color: #FFB400;
+    text-transform: capitalize;
+    padding: .3rem .8rem;
+    border-radius: 1rem;
+}
+
+/* Estilizando container de dados da moto */
+.moto_info {
+    flex: 1;
+}
+
+.moto_info>* {
+    font-size: 1rem;
+    line-height: .8rem;
+}
+
+
+/* estilizando botões para editar e excluir */
+.group_buttons {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+}

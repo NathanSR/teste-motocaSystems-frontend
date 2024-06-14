@@ -1,11 +1,11 @@
-import './App.css';
-import Button from './components/Button';
-import { HomeIcon, PlusIcon } from 'lucide-react';
-import Search from './components/Search';
 import { useEffect, useState } from 'react';
-import axios from './config/axios';
-import CardMotorcycle from './components/CardMotorcycle';
+import './App.css';
 import { Motorcycle } from './App.types';
+import { HomeIcon, PlusIcon } from 'lucide-react';
+import axios from './config/axios';
+import Button from './components/Button';
+import Search from './components/Search';
+import ListMotorcycles from './components/ListMotorcycles';
 
 function App() {
 	const [motorcyles, setMotorcycles] = useState<Motorcycle[]>([]);
@@ -14,9 +14,9 @@ function App() {
 		axios.get("/motorcycles").then((resp) => setMotorcycles([...resp.data]))
 	}, [])
 
-
 	return (
 		<div className="App">
+			{/* Depois transformar em component Header */}
 			<header>
 				<div className='initialHeader'>
 					<nav>
@@ -30,10 +30,7 @@ function App() {
 					<Button icon={<PlusIcon />} children="NOVO REGISTRO" />
 				</div>
 			</header>
-			{/* Depois transformar em ListMotocycles */}
-			<section>
-				{motorcyles.map(moto => <CardMotorcycle data={moto} />)}
-			</section>
+			<ListMotorcycles array={motorcyles} />
 		</div>
 	);
 }
