@@ -1,5 +1,12 @@
+:root{
+	--bg-color: #2A233C;
+	--text-color: #CAC9CD;
+	--text-color-disabled: #E7E3FC80;
+	--text-size: 12px;
+}
+
 html {
-	font-size: 12px;
+	font-size: var(--text-size);
 }
 
 body {
@@ -9,7 +16,9 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #2A233C;
+	background-color: var(--bg-color);
+	font-size: 1rem;
+	color: var(--text-color);
 }
 
 

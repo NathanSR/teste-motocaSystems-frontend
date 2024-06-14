@@ -1,0 +1,51 @@
+.Input {
+    width: 100%;
+    position: relative;
+}
+
+.Input label {
+    position: absolute;
+    top: -.8rem;
+    left: 1rem;
+    background-color: var(--bg-color);
+    padding: 0 .3rem;
+}
+
+.Input main {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    border-radius: .5rem;
+}
+
+.prefix{
+    color: var(--text-color-disabled);
+    margin-left: 1rem;
+}
+
+.Input select,input{
+    padding: .8rem .9rem;
+}
+
+.Input select {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+}
+
+.Input select option {
+    color: black;
+}
+
+/* Estilo para o input quando focado */
+.Input:has(input:focus, select:focus) main{
+    box-shadow: 0 0 1rem -.3rem #16aaff;
+    border-color: #16aaff; 
+}
+
+/* Estilo para quando mouse passar por input */
+.Input:has(input:hover, select:hover) main{
+    border-color: #16aaff; 
+}

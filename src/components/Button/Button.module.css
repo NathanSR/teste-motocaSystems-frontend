@@ -10,10 +10,6 @@
     cursor: pointer;
 }
 
-.Button svg{
-    font-size: 1.3rem;
-}
-
 .default {
     background-color: #3badfb;
     color: white;

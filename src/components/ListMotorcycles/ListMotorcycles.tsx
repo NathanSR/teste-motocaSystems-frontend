@@ -4,8 +4,10 @@ import styles from './ListMotorcycles.module.css';
 import { ListMotorcyclesProps } from './ListMotorcycles.types';
 import axios from '../../config/axios';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
+    const navigate = useNavigate();
     const [motorcycles, setMotorcycles] = state;
     const onDelete = async (id: string) => {
         try {
@@ -41,7 +43,7 @@ const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
         <div className={styles.ListMotorcycles}>
             {motorcycles.map(data =>
                 <div className={styles.CardMotorcycle}>
-                    <p className={styles.moto_code}>{data.id}</p>
+                    <p className={styles.moto_code}>#{data.id}</p>
                     <article className={styles.moto_info}>
                         <h1>
                             <span className={styles.moto_model}>{data.model}</span>
@@ -59,6 +61,7 @@ const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
                         <Button
                             icon={<EyeIcon color='white' size="1.5rem" />}
                             theme='transparent'
+                            onClick={() => navigate(`/motorcycles/form?motorcycleId=${data.id}`)}
                         />
                     </div>
                 </div>

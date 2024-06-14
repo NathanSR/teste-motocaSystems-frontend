@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import styles from './Motorcycles.module.css';
-import { Motorcycle } from '../../pages/Motocycles/Motocycles.types';
+import { Motorcycle } from './Motorcycles.types';
 import { PlusIcon } from 'lucide-react';
 import axios from '../../config/axios';
 import Button from '../../components/Button';
 import Search from '../../components/Search';
 import ListMotorcycles from '../../components/ListMotorcycles';
 import Header from '../../components/Header';
+import { useNavigate } from 'react-router-dom';
 
 function Motorcycles() {
+	const navigate = useNavigate()
 	const [motorcyles, setMotorcycles] = useState<Motorcycle[]>([]);
 
 	useEffect(() => {
@@ -21,7 +23,7 @@ function Motorcycles() {
 				contentHeaderTitle="Tabela de Motos"
 				contentHeaderAdditional={<>
 					<Search state={[motorcyles, setMotorcycles]} />
-					<Button icon={<PlusIcon />} children="NOVO REGISTRO" />
+					<Button icon={<PlusIcon />} onClick={() => navigate("/motorcycles/form")} children="NOVO REGISTRO" />
 				</>}
 			/>
 			<ListMotorcycles state={[motorcyles, setMotorcycles]} />
