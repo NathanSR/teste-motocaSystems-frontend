@@ -1,0 +1,50 @@
+
+/* Estilos para primeiro cabeçalho */
+.initialHeader{
+	display: flex;
+	justify-content: end;
+}
+
+.initialHeader > nav{
+	display: flex;
+	gap: 1rem;
+}
+
+/* Estilizando Icone de usuário */
+.userProfilePicture{
+	background-image: url('../../../public/userProfilePicture.png');
+	background-size: cover;
+	width: 3rem;
+	border-radius: 100%;
+	aspect-ratio: 1;
+	position: relative;
+}
+
+.userProfilePicture::before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 10%;
+	width: .5rem;
+	height: .5rem;
+	border: .2rem solid #342B4A;
+	border-radius: 100%;
+	background-color: greenyellow;
+}
+
+
+
+/* Estilos para segundo cabeçalho */
+.contentHeader{
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	border-bottom: 1px solid #CAC9CD;
+	padding: 1rem 0 .5rem;
+	margin-top: 1rem;
+}
+
+.contentHeader > h1{
+	flex: 1;
+	text-wrap: nowrap;
+}
