@@ -1,5 +1,5 @@
-.Search{
-    height: 3rem;
+.Search {
+	height: 3rem;
 	display: flex;
 	align-items: center;
 	gap: .5rem;
@@ -11,7 +11,7 @@
 	flex: 1;
 }
 
-.Search input{
+.Search input {
 	outline: none;
 	border: none;
 	background: transparent;
@@ -20,5 +20,11 @@
 }
 
 .Search ::placeholder {
-    color: inherit;
+	color: inherit;
+}
+
+/* Estilo para quando o input for focado */
+.Search:has(input:focus) {
+	box-shadow: 0 0 1rem -.3rem #16aaff;
+	border-color: #16aaff;
 }
