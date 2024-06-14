@@ -26,6 +26,15 @@
 
 .Input select,input{
     padding: .8rem .9rem;
+    outline: none;
+	border: none;
+	background: transparent;
+	color: inherit;
+	width: 100%;
+}
+
+.Search ::placeholder {
+    color: inherit;
 }
 
 .Input select {

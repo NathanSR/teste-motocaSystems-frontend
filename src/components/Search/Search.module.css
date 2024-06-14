@@ -11,7 +11,7 @@
 	flex: 1;
 }
 
-input{
+.Search input{
 	outline: none;
 	border: none;
 	background: transparent;
@@ -19,7 +19,6 @@ input{
 	width: 100%;
 }
 
-::placeholder {
+.Search ::placeholder {
     color: inherit;
-    opacity: 1;
 }
