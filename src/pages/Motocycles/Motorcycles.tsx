@@ -20,7 +20,7 @@ function Motorcycles() {
 			<Header
 				contentHeaderTitle="Tabela de Motos"
 				contentHeaderAdditional={<>
-					<Search />
+					<Search state={[motorcyles, setMotorcycles]} />
 					<Button icon={<PlusIcon />} children="NOVO REGISTRO" />
 				</>}
 			/>
