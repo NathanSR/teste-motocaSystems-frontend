@@ -1,30 +1,18 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import { Motorcycle } from './App.types';
-import { PlusIcon } from 'lucide-react';
-import axios from './config/axios';
-import Button from './components/Button';
-import Search from './components/Search';
-import ListMotorcycles from './components/ListMotorcycles';
-import Header from './components/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Motorcycles from './pages/Motocycles';
+import Initial from './pages/Initial';
 
 function App() {
-	const [motorcyles, setMotorcycles] = useState<Motorcycle[]>([]);
-
-	useEffect(() => {
-		axios.get("/motorcycles").then((resp) => setMotorcycles([...resp.data]))
-	}, [])
 
 	return (
 		<div className="App">
-			<Header
-				contentHeaderTitle="Tabela de Motos"
-				contentHeaderAdditional={<>
-					<Search />
-					<Button icon={<PlusIcon />} children="NOVO REGISTRO" />
-				</>}
-			/>
-			<ListMotorcycles state={[motorcyles, setMotorcycles]} />
+			<Router>
+				<Routes>
+					<Route path='/' element={<Initial />} />
+					<Route path='/motorcycles' element={<Motorcycles />} />
+				</Routes>
+			</Router>
 		</div>
 	);
 }

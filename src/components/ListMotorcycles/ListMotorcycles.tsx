@@ -9,6 +9,18 @@ const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
     const [motorcycles, setMotorcycles] = state;
     const onDelete = async (id: string) => {
         try {
+            const confirm = await Swal.fire({
+                title: 'Tem certeza?',
+                text: 'Você realmente quer deletar este item?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, deletar!',
+                cancelButtonText: 'Cancelar'
+            })
+            if (confirm.isDismissed) return;
+
             await axios.delete(`/motorcycles/${id}`);
             const resp = await axios.get("/motorcycles");
             setMotorcycles([...resp.data]);
