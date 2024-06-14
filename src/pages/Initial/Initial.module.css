@@ -11,10 +11,16 @@
 
 .Initial h1, h2{
     margin: 0;
+    font-size: 3rem;
+}
+
+.Initial h2{
+    font-size: 2rem;
 }
 
 .Initial p{
     margin-top: 3rem;
+    font-size: 1.5rem;
 }
 
 .Initial button{
