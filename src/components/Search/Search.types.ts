@@ -1,3 +1,3 @@
 export interface SearchProps {
-    children?: React.ReactNode;
+    placeholder?: string;
 }

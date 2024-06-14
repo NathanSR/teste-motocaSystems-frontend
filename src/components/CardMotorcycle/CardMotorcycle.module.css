@@ -1,0 +1,43 @@
+.CardMotorcycle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem -.6rem black;
+}
+.CardMotorcycle:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Estilizar codigo da moto */
+.moto_code {
+    color: #8C57FF;
+    font-weight: bold;
+    width: 8rem;
+    text-align: center;
+}
+
+
+/* Estilizando container de dados da moto */
+.moto_info {
+    flex: 1;
+}
+
+.moto_info>h1 {
+    text-transform: uppercase;
+}
+
+.moto_info>* {
+    font-size: 1rem;
+    line-height: .8rem;
+}
+
+
+/* estilizando botões para editar e excluir */
+.group_buttons {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+}
