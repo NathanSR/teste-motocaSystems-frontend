@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import styles from './MotorcyclesForm.module.css'
 import { Motorcycle } from "../Motorcycles/Motorcycles.types";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useForm, FormProvider } from "react-hook-form";
 import Header from "../../components/Header";
 import Button from "../../components/Button";
+import Form from "../../components/Form";
 import Input from "../../components/Input";
 import axios from '../../config/axios';
 import { ArrowUpCircleIcon, PlusIcon } from "lucide-react";
 import Swal from 'sweetalert2';
+
 
 function MotorcyclesForm() {
 	const navigate = useNavigate()
@@ -20,14 +21,11 @@ function MotorcyclesForm() {
 	useEffect(() => {
 		if (motorcycleId) {
 			axios.get(`/motorcycles/${motorcycleId}`).then(resp => {
-				setMotorcycle(resp.data);
-				reset(resp.data);  // Atualiza os valores do formulário com os dados da moto
+				setMotorcycle({ ...resp.data });
+				// reset(resp.data);  // Atualiza os valores do formulário com os dados da moto
 			});
 		}
 	}, [motorcycleId]);
-
-	const formController = useForm<Motorcycle>({ defaultValues: motorcycle });
-	const { handleSubmit, reset, } = formController;
 
 	const onSubmit = async (data: Motorcycle) => {
 		try {
@@ -56,21 +54,19 @@ function MotorcyclesForm() {
 			<Header contentHeaderTitle={motorcycleId ? "Editar" : "Registro de Motos"} />
 			<main>
 				<h2>{motorcycleId ? "Edite as informações que preferir! 📝" : "Preencha as informações a baixo para registrar uma Moto 🏍️"}</h2>
-				<FormProvider {...formController}>
-					<form onSubmit={handleSubmit(onSubmit)}>
-						<Input label="Código" name="id" prefix="#" disabled={!!motorcycleId} required />
-						<Input label="Modelo da Moto" name="model" required />
-						<Input label="Cor" name="color" required />
-						<Input label="Valor" type="number" name="value" required step={0.01} />
-						<Input label="Status" type="select" name="status" options={["Em estoque", "Sem estoque", "Em trânsito"]} required />
+				<Form defaultValues={motorcycle} onSubmit={onSubmit}>
+					<Input label="Código" name="id" prefix="#" disabled={!!motorcycleId} required />
+					<Input label="Modelo da Moto" name="model" required />
+					<Input label="Cor" name="color" required />
+					<Input label="Valor" type="number" name="value" required step={0.01} />
+					<Input label="Status" type="select" name="status" options={["Em estoque", "Sem estoque", "Em trânsito"]} required />
 
-						<Button
-							type="submit"
-							icon={motorcycleId ? <ArrowUpCircleIcon size="1.3rem" /> : <PlusIcon size="1.3rem" />}
-							children={motorcycleId ? "Atualizar" : "Registrar"}
-						/>
-					</form>
-				</FormProvider>
+					<Button
+						type="submit"
+						icon={motorcycleId ? <ArrowUpCircleIcon size="1.3rem" /> : <PlusIcon size="1.3rem" />}
+						children={motorcycleId ? "Atualizar" : "Registrar"}
+					/>
+				</Form>
 			</main>
 		</div>
 	)

@@ -53,7 +53,7 @@
       "id": "9",
       "model": "Honda CB300R",
       "color": "Laranja",
-      "value": 33000,
+      "value": 33000123,
       "status": "Sem estoque"
     },
     {
@@ -72,10 +72,10 @@
     },
     {
       "id": "1234567",
-      "color": "q123123",
-      "model": "qwewqe",
+      "color": "Branco",
+      "model": "HONDA XR19283",
       "status": "Em estoque",
-      "value": 123123
+      "value": 39888
     }
   ]
 }
