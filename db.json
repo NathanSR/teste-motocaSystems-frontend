@@ -38,9 +38,9 @@
     {
       "id": "7",
       "model": "Honda CBR1000RR",
-      "color": "Cinza",
+      "color": "Preto",
       "value": 37000,
-      "status": "Em trânsito"
+      "status": "Sem estoque"
     },
     {
       "id": "8",
@@ -69,6 +69,13 @@
       "model": "234",
       "status": "Em estoque",
       "value": 234
+    },
+    {
+      "id": "1234567",
+      "color": "q123123",
+      "model": "qwewqe",
+      "status": "Em estoque",
+      "value": 123123
     }
   ]
 }

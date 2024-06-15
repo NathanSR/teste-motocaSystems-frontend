@@ -17,6 +17,7 @@
 	background: transparent;
 	color: inherit;
 	width: 100%;
+	font-size: 1rem;
 }
 
 .Search ::placeholder {

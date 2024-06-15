@@ -1,4 +1,4 @@
-import { ReactNode, useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import styles from './Search.module.css';
 import { SearchProps } from './Search.types';
 import { SearchIcon } from 'lucide-react';

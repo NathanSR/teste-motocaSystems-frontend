@@ -27,8 +27,11 @@
 .moto_code {
     color: #8C57FF;
     font-weight: bold;
-    width: 8rem;
+    width: min(8rem, 10vw);
     text-align: center;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
 }
 
 /* Estilizar modelo da moto */
@@ -44,6 +47,7 @@
     text-transform: capitalize;
     padding: .3rem .8rem;
     border-radius: 1rem;
+    display: inline-block;
 }
 .moto_status_Sem_estoque{
     background-color: #55304C;
@@ -51,6 +55,7 @@
     text-transform: capitalize;
     padding: .3rem .8rem;
     border-radius: 1rem;
+    display: inline-block;
 }
 .moto_status_Em_trânsito{
     background-color: #544146;
@@ -58,6 +63,7 @@
     text-transform: capitalize;
     padding: .3rem .8rem;
     border-radius: 1rem;
+    display: inline-block;
 }
 
 /* Estilizando container de dados da moto */

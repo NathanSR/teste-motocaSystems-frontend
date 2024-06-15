@@ -3,15 +3,15 @@ import styles from './Button.module.css';
 import { ButtonProps } from './Button.types';
 import { LoaderCircleIcon } from 'lucide-react';
 
-const Button: React.FC<ButtonProps> = ({ icon, children, isAsync, theme = "default", onClick, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ icon, children, isAsync, theme = "default", onClick, hideLabelInMobile = false, ...props }) => {
     const [loading, setLoading] = useState(false);
 
     const whenClick = async (event: MouseEvent<HTMLButtonElement>) => {
         if (onClick) {
-            try{
+            try {
                 setLoading(true);
                 await onClick(event);
-            }finally{
+            } finally {
                 setLoading(false);
             }
         }
@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({ icon, children, isAsync, theme = "defau
 
     return (
         <button
-            className={`${styles.Button} ${styles[theme]}`}
+            className={`${styles.Button} ${styles[theme]} ${hideLabelInMobile ? styles['hideLabelInMobile'] : ""}`}
             type='button'
             onClick={whenClick}
             {...props}
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({ icon, children, isAsync, theme = "defau
                     :
                     <>
                         {icon}
-                        {children}
+                        {(children) && <span>{children}</span>}
                     </>
             }
         </button>

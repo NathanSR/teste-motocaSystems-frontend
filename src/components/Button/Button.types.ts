@@ -2,4 +2,5 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     icon?: React.ReactNode;
     isAsync?: boolean;
     theme?: "transparent" | "default";
+    hideLabelInMobile?: boolean;
 }

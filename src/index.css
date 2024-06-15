@@ -2,7 +2,7 @@
 	--bg-color: #2A233C;
 	--text-color: #CAC9CD;
 	--text-color-disabled: #E7E3FC80;
-	--text-size: 12px;
+	--text-size: min(2.4vw, 12px); /* Adiciona uma leve responsividade à interfaces mobile */
 }
 
 html {
@@ -17,7 +17,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--bg-color);
-	font-size: 1rem;
 	color: var(--text-color);
 }
 

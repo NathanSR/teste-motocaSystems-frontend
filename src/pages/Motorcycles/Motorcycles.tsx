@@ -23,7 +23,7 @@ function Motorcycles() {
 				contentHeaderTitle="Tabela de Motos"
 				contentHeaderAdditional={<>
 					<Search state={[motorcyles, setMotorcycles]} isQueryTheAPI={false} querySelector='.App .ListMotorcycles_CardMotorcycle__NBID2' />
-					<Button icon={<PlusIcon />} onClick={() => navigate("/motorcycles/form")} children="NOVO REGISTRO" />
+					<Button icon={<PlusIcon size="1.3rem" />} onClick={() => navigate("/motorcycles/form")} children={"NOVO REGISTRO"} hideLabelInMobile />
 				</>}
 			/>
 			<ListMotorcycles state={[motorcyles, setMotorcycles]} />

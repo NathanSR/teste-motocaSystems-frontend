@@ -10,8 +10,8 @@ const Header: React.FC<HeaderProps> = ({ contentHeaderTitle, contentHeaderAdditi
         <header>
             <div className={styles.initialHeader}>
                 <nav>
-                    <Button icon={<HomeIcon />} theme='transparent' onClick={() => navigate("/motorcycles")} />
-                    <Button icon={<LogOutIcon />} theme='transparent' onClick={() => navigate("/")} />
+                    <Button icon={<HomeIcon size="2rem" />} theme='transparent' onClick={() => navigate("/motorcycles")} />
+                    <Button icon={<LogOutIcon size="2rem" />} theme='transparent' onClick={() => navigate("/")} />
                     <div className={styles.userProfilePicture} />
                 </nav>
             </div>
