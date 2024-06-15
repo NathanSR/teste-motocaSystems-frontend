@@ -37,6 +37,8 @@ Para começar a usar este projeto, siga os passos abaixo:
 
 Isso irá iniciar a aplicação React no modo de desenvolvimento. Você poderá visualizar o projeto no seu navegador acessando `http://localhost:3000`.
 
+OBS: Caso necessite reiniciar o banco de dados com os objetos de moto já predefinidos é só copiar o conteúdo do arquivo `db.bkp.json` para `db.json`.
+
 
 
 ## Componentes Principais
