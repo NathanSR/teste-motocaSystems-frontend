@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({ icon, children, isAsync, theme = "defau
         >
             {
                 loading ?
-                    <LoaderCircleIcon size="1.3rem" />
+                    <LoaderCircleIcon size="1.3rem" color='#FF4C51' className={styles.loading} />
                     :
                     <>
                         {icon}

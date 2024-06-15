@@ -5,6 +5,7 @@ import { ListMotorcyclesProps } from './ListMotorcycles.types';
 import axios from '../../config/axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import { delay } from '../../utils/delay.util';
 
 const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
 
             await axios.delete(`/motorcycles/${id}`);
             const resp = await axios.get("/motorcycles");
+            await delay();
             setMotorcycles([...resp.data]);
             Swal.fire({
                 icon: 'success',

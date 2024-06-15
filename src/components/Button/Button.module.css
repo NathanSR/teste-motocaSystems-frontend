@@ -16,10 +16,20 @@
     color: white;
 }
 
-.transparent{
+.transparent {
     background-color: transparent;
     border: transparent;
     color: inherit;
+}
+
+.loading {
+    animation: rotating ease infinite 1s;
+}
+
+@keyframes rotating {
+    to {
+        rotate: 360deg;
+    }
 }
 
 @media (max-width: 756px) {
