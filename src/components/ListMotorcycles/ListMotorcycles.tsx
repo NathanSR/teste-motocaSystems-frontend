@@ -44,7 +44,7 @@ const ListMotorcycles: React.FC<ListMotorcyclesProps> = ({ state }) => {
     return (
         <div className={styles.ListMotorcycles}>
             {motorcycles.map(data =>
-                <div className={styles.CardMotorcycle}>
+                <div key={data.id} className={styles.CardMotorcycle}>
                     <p className={styles.moto_code}>#{data.id}</p>
                     <article className={styles.moto_info}>
                         <h1>

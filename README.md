@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Sistema de Gerenciamento de Motos - Documentação Inicial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi criado por mim, Nathan Santos, para participação no processo seletivo à vaga de Frontend Jr na empresa MOTOCA MOTORES TOCANTINS LTDA em junho de 2024. 
+Este é um sistema de gerenciamento de motos, desenvolvido utilizando React+Typescript no frontend e json-server simulando a API backend. 
+O sistema permite registrar, visualizar, editar e excluir informações sobre diversas motocicletas e pode funcionar em diferentes tamanhos de telas.
 
-## Available Scripts
+OBS: Cada componente e página tem sua respectiva documentação no arquivo README.md dentro de seu próprio diretório.
 
-In the project directory, you can run:
+## Instalação
 
-### `npm start`
+Para começar a usar este projeto, siga os passos abaixo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone o repositório usando o Git:
+    ```bash
+    git clone https://github.com/NathanSR/teste-motocaSystems-frontend.git
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navegue até o diretório do projeto clonado:
+    ```bash
+    cd teste-motocaSystems-frontend
+    ```
 
-### `npm test`
+3. Instale as dependências necessárias utilizando npm:
+    ```bash
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Inicie a API de teste:
+    ```bash
+    npm run server
+    ```
 
-### `npm run build`
+5. Por fim, inicie a aplicação React:
+    ```bash
+    npm start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Isso irá iniciar a aplicação React no modo de desenvolvimento. Você poderá visualizar o projeto no seu navegador acessando `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Componentes Principais
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Button:** Componente para criar botões com diferentes estilos e funcionalidades.
+- **Form:** Componente para criar formulários controlados com validação de dados.
+- **Header:** Componente para exibir cabeçalhos em diferentes páginas da aplicação.
+- **Input:** Componente para criar campos de entrada de dados com suporte a diversos tipos e validações.
+- **ListMotorcycles:** Componente para renderizar uma lista de motocicletas com opções de ações.
+- **Search:** Componente para busca e filtragem de motocicletas localmente ou via API.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Páginas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Initial:**
+  A página `Initial` apresenta uma tela inicial com informações sobre o sistema de gerenciamento de motos, oferecendo um botão para entrar na aplicação.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Motorcycles:**
+  A página `Motorcycles` exibe uma tabela de motocicletas com funcionalidades de busca, adição de novos registros e visualização detalhada.
 
-## Learn More
+- **MotorcyclesForm:**
+  A página `MotorcyclesForm` permite adicionar novas motocicletas ou editar informações existentes através de um formulário interativo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Funcionalidades Principais
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Cadastro e Edição de Motocicletas:** Capacidade de adicionar novas motocicletas ou editar informações existentes.
+- **Busca e Filtragem:** Funcionalidade de busca para localizar motocicletas com base em diferentes critérios.
+- **Interação com API:** Comunicação direta com uma API backend de teste para operações CRUD de motocicletas.
+- **Feedback ao Usuário:** Utilização de `Swal` (SweetAlert2) para fornecer feedback visual sobre ações realizadas.
+- **Responsividade:** O sistema foi adaptado para funcionar em diferentes tamanhos de telas.
+

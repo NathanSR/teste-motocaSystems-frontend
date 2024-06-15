@@ -5,13 +5,13 @@ import { SearchIcon } from 'lucide-react';
 import axios from '../../config/axios';
 
 const Search: React.FC<SearchProps> = ({ placeholder = 'Buscar por código, modelo ou cor', state, querySelector = "", isQueryTheAPI = false, APIRoute, APIField }) => {
-    const [motorcycles, setMotorcycles] = state;
+    const [items, setItems] = state;
     let [filter, setFilter] = useState("");
 
     const onSearch = async () => {
         if (isQueryTheAPI) {
             const resp = await axios.get(`${APIRoute}?${APIField}=${filter}`)
-            setMotorcycles([...resp.data])
+            setItems([...resp.data])
         }
     }
 
@@ -21,7 +21,7 @@ const Search: React.FC<SearchProps> = ({ placeholder = 'Buscar por código, mode
 
         let DOMItemReferences = Array.from(document.body.querySelectorAll(querySelector));
         DOMItemReferences.forEach((row, indexRow) => {
-            const item = motorcycles[indexRow]
+            const item = items[indexRow]
             if (
                 item.color?.toLocaleLowerCase().includes(filter?.toLocaleLowerCase()) ||
                 item.id?.toLocaleLowerCase().includes(filter?.toLocaleLowerCase()) ||

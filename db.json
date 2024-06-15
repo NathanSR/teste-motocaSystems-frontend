@@ -6,6 +6,20 @@
       "model": "234",
       "status": "Em estoque",
       "value": 234
+    },
+    {
+      "id": "1234",
+      "color": "1234",
+      "model": "1234",
+      "status": "Em estoque",
+      "value": 1234
+    },
+    {
+      "id": "2345",
+      "color": "345",
+      "model": "345",
+      "status": "Em estoque",
+      "value": 345
     }
   ]
 }

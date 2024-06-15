@@ -22,7 +22,6 @@ function MotorcyclesForm() {
 		if (motorcycleId) {
 			axios.get(`/motorcycles/${motorcycleId}`).then(resp => {
 				setMotorcycle({ ...resp.data });
-				// reset(resp.data);  // Atualiza os valores do formulário com os dados da moto
 			});
 		}
 	}, [motorcycleId]);
